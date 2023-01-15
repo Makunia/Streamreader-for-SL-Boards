@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stream Information</title>
+</head>
+<body>
+
+<?php
+  $stream_url = $_GET['stream_url'];
+  $information = file_get_contents($stream_url);
+  echo substr($information, 0, 64);
+?>
+
+</body>
+</html>
